@@ -8,7 +8,7 @@ package com.storedobject.svg.chart;
 public abstract class Chart {
 
     /**
-     * SVG content of the chart.
+     * SVG content of the chart ushered by the derived classes.
      */
     protected String svg;
 
@@ -18,12 +18,12 @@ public abstract class Chart {
     protected final Values values;
 
     /**
-     * Default width of the chart.
+     * Default width of the chart. Derive classes can override this to set a custom width.
      */
     protected int width = 600;
 
     /**
-     * Default height of the chart.
+     * Default height of the chart. Derive classes can override this to set a custom height.
      */
     protected int height = 400;
 
@@ -166,5 +166,23 @@ public abstract class Chart {
                         : Values.toString(scaleWidthPercentage, "%"),
                 scaleHeightPercentage <= 0 || scaleHeightPercentage > 100 ? "auto"
                         : Values.toString(scaleHeightPercentage, "%"));
+    }
+
+    /**
+     * Returns the width of the chart. This is the same as the viewbox width.
+     *
+     * @return The width of the chart as an integer.
+     */
+    public final int getWidth() {
+        return width;
+    }
+
+    /**
+     * Returns the height of the chart. This is the same as the viewbox height.
+     *
+     * @return The height of the chart as an integer.
+     */
+    public final int getHeight() {
+        return height;
     }
 }
