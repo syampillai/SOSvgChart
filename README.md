@@ -1,5 +1,7 @@
 # SO SVG Chart
 
+** Note: This project is discontinued. Please use the more powerfull SVG package - [SOsvg](https://github.com/syampillai/SOsvg)
+
 SO SVG Chart is a lightweight Java library for generating SVG-based charts. It provides a simple and intuitive API to create various types of charts including Bar charts, Pie charts (including Donut charts), and simple Plots.
 
 The main goal of this library is to provide a simple and efficient way to generate SVG charts in Java applications. The generated SVG code is highly scalable and can be easily embedded in web pages or other applications.
